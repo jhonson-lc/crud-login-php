@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6862527c-828c-4934-b75d-88adb5d3141c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     estudiantes.`est_cedula` AS estudiantes_est_cedula,
+     estudiantes.`est_nombre` AS estudiantes_est_nombre,
+     estudiantes.`est_apellido` AS estudiantes_est_apellido,
+     estudiantes.`est_direccion` AS estudiantes_est_direccion,
+     estudiantes.`est_telefono` AS estudiantes_est_telefono
+FROM
+     `estudiantes` estudiantes]]>
+	</queryString>
+	<field name="estudiantes_est_cedula" class="java.lang.String"/>
+	<field name="estudiantes_est_nombre" class="java.lang.String"/>
+	<field name="estudiantes_est_apellido" class="java.lang.String"/>
+	<field name="estudiantes_est_direccion" class="java.lang.String"/>
+	<field name="estudiantes_est_telefono" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="21" width="266" height="28" uuid="912b9fc6-c5db-4113-8930-e36816966ed8"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ESTUDIANTES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="128" height="20" forecolor="#FFFFFF" backcolor="#666666" uuid="2b866c52-a22a-4e71-b1ea-4e390ddd339d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[           CEDULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="128" y="2" width="100" height="20" forecolor="#FFFFFF" backcolor="#666666" uuid="99497bff-9191-4a9a-9040-6fc6d61a9148"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="228" y="2" width="100" height="20" forecolor="#FFFFFF" backcolor="#666666" uuid="6b06c53d-8fb9-4554-baf5-16f4e9c76d2b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="328" y="2" width="119" height="20" forecolor="#FFFFFF" backcolor="#666666" uuid="38faa29f-9456-4ae4-b085-a08b42407af9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="447" y="2" width="100" height="20" forecolor="#FFFFFF" backcolor="#666666" uuid="da66164c-27bb-4b9e-821c-f1658280dfd7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="28" y="0" width="100" height="20" uuid="c24a875f-9bc3-4e7c-943d-65b54979e75f"/>
+				<textFieldExpression><![CDATA[$F{estudiantes_est_cedula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="0" width="100" height="20" uuid="3ec5ab88-22d2-4cb7-ad99-08f954f19c84"/>
+				<textFieldExpression><![CDATA[$F{estudiantes_est_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="100" height="20" uuid="5644a693-0210-415f-a8db-d13853b7c269"/>
+				<textFieldExpression><![CDATA[$F{estudiantes_est_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="0" width="100" height="20" uuid="d6bc3545-3608-4585-aaf7-e5bdec5f9aa5"/>
+				<textFieldExpression><![CDATA[$F{estudiantes_est_direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="0" width="100" height="20" uuid="e7aae432-36c0-4a17-a78f-e2fa9646392e"/>
+				<textFieldExpression><![CDATA[$F{estudiantes_est_telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>
